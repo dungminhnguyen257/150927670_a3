@@ -1,0 +1,32 @@
+
+
+.center { display: block; text-align: center; }
+
+#w {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+#notification_container {
+  display: block;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+
+
+/** MailChimp Styles **/
+#mc_embed_signup{ background: #fff; clear: left; font: 14px Helvetica, Arial, sans-serif; text-align: center; width: 350px; margin: 0 auto; }
+
+/* MailChimp Form Embed Code - Slim - 08/17/2011 */
+#mc_embed_signup form {display: block; position: relative; text-align: left; padding: 10px 0 10px 3%; }
+
+
+#mc_embed_signup .nowrap { white-space: nowrap; }     
+#mc_embed_signup .clear { clear: none; display: inline; }
+
+
+#mc_embed_signup div#mce-responses { float: left; top: -1.4em; padding: 0em .5em 0em .5em; overflow: hidden; width: 90%; margin: 0 5%; clear: both; }

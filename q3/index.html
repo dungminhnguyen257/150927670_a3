@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width" />
+
+  <title>FakeChimp Image Registration</title>
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+ <script>
+ function formValidation()
+{
+
+var uemail = document.forms["regform"]["EMAIL"].value;
+var passid = document.forms["regform"]["PASSWORD"].value;
+var uname = document.forms["regform"]["USER"].value;
+
+if(username() && Validatepassword() && ValidateEmail(uemail))
+{
+return true;
+}
+else
+{
+return false;
+}
+
+function username()
+{ 
+var field = uname;
+var myc = field.charAt(0);
+if(field.length<8 || field.length> 24)
+{ 
+alert("Please input the username between " +8+ " and " +24+ " characters");
+return false;
+}
+
+if(uname.indexOf(' ') !== -1)
+{ 
+alert("Username cannot have spaces in it");
+return false;
+}
+if(myc <='9' && myc >= '0')
+{ 
+alert("Username cannot start with number");
+return false;
+}
+else
+{ 
+return true;
+}
+}
+
+
+function Validatepassword()
+{ 
+var myc = passid.charAt(0);
+if(passid.length<8 || passid.length> 24)
+{ 
+alert("Please input a password between " +8+ " and " +24+ " characters");
+return false;
+}
+if(passid.indexOf(' ') !== -1)
+{ 
+alert("Password cannot have spaces in it");
+return false;
+}
+if(myc <='9' && myc >= '0')
+{ 
+alert("Password cannot start with number");
+return false;
+}
+else
+{ 
+return true;
+}
+}
+
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("Please enter a valid email address.");
+return false;
+}
+
+
+}
+}
+ </script>
+
+<style>
+.lview{display: inline-block;}
+.sview{display:none;}
+.blogo{display: block;}
+.slogo{display:none;}
+@media only screen and (max-width: 500px) {.lview {display: none;} .sview{display:inline-block; } }
+@media only screen and (max-width: 500px) {.blogo{display: none;} .slogo{display:block;}}
+@media only screen and (max-width: 767px) {.blogo{display: none;} .slogo{display:block;}}
+
+.disc{
+display: inline-block;
+vertical-align: middle;
+horizontal-align: right;
+margin: 10px 0;
+}
+</style>
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico">
+  
+  
+
+</head>
+
+<body onload= "document.getElementById('email').focus();">
+
+	
+	
+	<div class="row">
+	<div class="three columns">
+	</div>
+	<div class="three columns">
+<div class="blogo">	
+	<img src = "images/mc2.png"></div>
+		<div class="slogo"><img src = "images/mc1.png"></div>
+		</div>
+		<div class="six columns">
+		
+	 <div class="row">
+    <div id="content">
+      <h1 style = "font-size: 34px; color:#241c15;">Get Started with your account</h1>
+     <span class= "lview"> <h6>Find your people. Engage your customers. Build your brand. Do it all with MailChimp's Marketing Platform. Already have an account? <a href = "#">Log In</a></h6></span>
+	 <span class= "sview"> <h6>Already have an account? <a href = "#">Log In</a></h6></span>
+	</div
+	><div class="row">
+        <form action="http://cp202-server.appspot.com/register_with_image" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" enctype="multipart/form-data" class="validate" target="_blank" novalidate>
+         
+          <input type="hidden" name="student_id" id="student_id" value="150927670">
+		  <input type="hidden" name="order_json" id="order_json" value="">
+		  <label for="mce-EMAIL">Email</label>
+		   <input type="email" value="" name="email" class="email" id="email" required><br/>
+		  
+			<label for="country">Country</label> 
+			  <select type="text" value="" name="country" class="country" id="country" required><br/>
+			<option value="AF">Australia</option>
+			<option value="AL">Canada</option>
+			<option value="DZ">India</option>
+			<option value="AS">Russia</option>
+			<option value="AD">USA</option>
+			</select><br/>
+			
+		  <label for="mce-EMAIL">Description</label> 
+          <textarea rows="4" value="" name="description" class="description" id="description" required></textarea><br/>
+		  
+		  <input type="file" name="avatarImage" value="fileupload" id="avatarImage"><br/><p>
+          
+	  <input type="submit" value="Get Started!" name="subscribe" id="mc-embedded-subscribe" class="button">
+		 
+		 
+		 <label class = "disc" id = "disc" name = "disc"> By Clicking the "Get Started" button, you are <br/>
+creating a MailChimp account, and you agree to <br/>MailChimp's
+<a href="#"><u>Terms of use</a></u> and <a href="#"><u>Privacy Policy</u></a></label>
+		  
+        
+		</form>
+        
+        <div id="notification_container"></div>
+     <div class="row">
+	  
+	</div>
+	</div>
+	
+	</div>
+	<div class="row">
+	
+	</div>
+	<div class="twelve columns">
+	
+		
+		
+	   </div>
+<p> <a href = "../registrations_with_image/index.html"><u>All Registrations</u></a></p>	
+	<hr />
+		<p align="left">©2001-2009. All Rights Reserved, MailChimp is a registered trademark of the Rocket Science Group.
+<u>Cookie Preferences</u>, <u>Privacy</u> and <u>Terms</u>.<p>
+		
+	</div>
+</body>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to the Donut Shop</title>
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico">
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="http://wlu-cp202.appspot.com/CP202/Fall2019/shopping_cart_v1/checkout.js" async></script>
+
+<style>
+/* <CHECKOUT_CART> */
+.item {
+  background: red !important;
+  color: green !important;
+}
+
+#item-name {
+  color: white;
+}
+
+#item-description {
+  color: white;
+}
+
+#item-quantity {
+  color:white;
+}
+
+#item-price {
+  color:white;
+}
+
+#item-quantity {
+  color:white;
+}
+
+#cart-total {
+  background: red;
+}
+
+#cart-total-subtotal {
+  color:white;
+}
+
+#cart-total-hst {
+  color: white;
+}
+
+#cart-total-amount {
+  color:white;
+}
+
+.white-text {
+  color:white;
+}
+/* </CHECKOUT_CART> */
+
+</style>
+
+</head>
+
+<body>
+		<script>
+				function PostOrder(){
+				clientAddItemToCart({prodName: 'Vanilla Delight', prodDesc: 'Vanilla Flavoured donut', prodPrice: '7.95', prodQty: '1'});}
+				</script>
+
+	<div class="row">
+		<div class="twelve columns">
+		<img src="" align="left"/>
+		<p align="center"><h2>Welcome to the best donut shop ever!</h2></p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li class="active"><a href="index.html">Home</a></li>
+  				<li  class="active"><a href="../orders/index.html">Orders</a></li>
+			</ul>
+			
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<div class="twelve columns">
+			<div class="row">
+				<div class="eight columns">
+					<h3>Check Out</h3>
+					<p>
+					Please continue with check out. Thank you for all your purchases, please do visit us again.
+					<br /><br />
+					</p>
+					<div id="cp202-cart"></div>
+					<hr />					
+				</div>
+		<div class="four columns">
+					<div id="content">
+      <h4>Order</h4>
+				
+					<p>
+					 <form onSubmit="PostOrder()" action="http://cp202-server.appspot.com/orders/" method="post" id="oform" name="oform" class="validate" target="_blank" novalidate>
+					<input type="hidden" name="order_json" id="order_json" value="">
+					<input type="hidden" name="student_id" id="student_id" value="150927670">
+					
+					</p>
+				
+					<br />
+					<hr />
+					 <input type="submit" value="Order" name="order" id="order" class="button">
+					<hr />
+					</form>
+				</div>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+	<div class="row">
+	
+	
+	<div class="row"> </div>
+
+		<hr />
+		<p align="center">©2019 Assignment 3.</p>
+		
+	</div>
+</body>
+
+
+
+
+
+
+
+ 

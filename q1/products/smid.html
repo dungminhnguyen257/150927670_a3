@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en"> 
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to the Donut Shop</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href=".../css/style.css">
+ 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="http://wlu-cp202.appspot.com/CP202/Fall2019/shopping_cart_v1/cart.js" async></script>
+
+<!-- YOU MUST MODIFY THIS VALUE TO POINT TO YOUR ACTUAL CHECKOUT PAGE -->
+<script>localStorage.checkoutURL = '../checkout.html';</script>
+
+<script>
+function PostOrder(){
+var name = document.getElementById('prodName');
+var desc = document.getElementById('prodDesc');
+var price = document.getElementById('prodPrice');
+var qty = document.getElementById('prodQty');
+
+
+clientAddItemToCart({prodName: name, prodDesc: desc, prodPrice: price, prodQty: qty});
+}
+</script>
+
+</head>
+
+<body>
+	
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li><a href="../index.html">Home</a></li>
+  				<li  class="active"><a href="#">Products</a></li>
+				<li><a href="../../Orders/index.html">Orders</a></li>
+			</ul>
+			
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<div class="twelve columns">
+			<div class="row">
+		<div class="eight columns">		
+				
+					<h3>Chocolate Smidget - $5.99</h3>
+<img src="../images/products/smidgets.jpg" />				
+				<p>
+					<h6>Ingredients: Glutten free wheat flour, sugar, fat-free oil, Additives, chocolate</h6>
+						<br /><br />
+					</p>
+					<div id="cp202-cart"></div>
+					<hr />					
+				</div>
+		
+				<div class="four columns">
+					<div id="content">
+      <h4>Order</h4>
+				
+					<p>
+					 <form onSubmit="PostOrder()" action="http://cp202-server.appspot.com/order" method="post" id="oform" name="oform" class="validate" target="_blank" novalidate>
+					<input type="hidden" name="order_json" id="order_json" value="">
+					<input type="hidden" name="student_id" id="student_id" value="150927670">
+					
+					<input type="text" id="prodName" name="prodName" value="Chocolate Smidget" readonly></input>
+
+					<input type="text" id="prodDesc" name="prodDesc" value="Chocolate filled puffy donut" readonly></input>
+					
+					<input type="text" id="prodPrice" name="prodPrice" value="5.99" readonly></input>
+
+					<input type="text" id="prodQty" name="prodQty" value="1"></input>
+
+					</p>
+					<p>
+					</p>
+					<br />
+					<hr />
+					 <input type="submit" value="Add" name="subscribe" id="submit" class="button" onclick = "PostOrder()">
+					<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<p align="center">©2019 Assignment 3.</p>
+		
+	</div>
+</body>
+
+
+
+
+
+
+
+
+ 

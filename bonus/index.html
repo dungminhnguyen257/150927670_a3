@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Question 4</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+<script>
+function GetData(){
+	console.log("here");
+	fetch('http://cp202-server.appspot.com/keys/150927670')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+		document.getElementById("demo").innerHTML = JSON.stringify(data);
+    });
+	// jQuery.ajax({
+    //         url: "http://cp202-server.appspot.com/keys/150927670",
+    //         type: "GET",
+
+    //         contentType: 'application/json; charset=utf-8',
+    //         success: function(resultData) {
+    //             //here is your json.
+    //               // process it
+
+    //         },
+    //         error : function(jqXHR, textStatus, errorThrown) {
+    //         },
+
+    //         timeout: 120000,
+    //     });
+	
+// var request = new XMLHttpRequest();
+// request.open('GET', 'http://cp202-server.appspot.com/keys/150927670');
+
+//     request.send();  
+// request.onload = function() {
+//   // Begin accessing JSON data here
+//   FormatTable(request.response);
+//   var el_up = document.getElementById('root');
+// }
+
+
+//         el_up.innerHTML = "Click on the button to create the " 
+
+//                 + "table from JSON data.<br><br>"  
+
+//                 + JSON.stringify(data[0]);    
+
+//           
+
+//         function FormatTable(data) { 
+
+//             var cols = []; 
+//             for (var i = 0; i < data.length; i++) { 
+
+//                 for (var k in data[i]) { 
+
+//                     if (cols.indexOf(k) === -1) { 
+//                         // Push all keys to the array 
+//                         cols.push(k); 
+
+//                     } 
+
+//                 } 
+
+//             } 
+//             // Create a table element 
+
+//             var table = document.createElement("table"); 
+//             // Create table row tr element of a table 
+
+//             var tr = table.insertRow(-1); 
+//             for (var i = 0; i < cols.length; i++) {
+//                 // Create the table header th element 
+//                 var theader = document.createElement("th"); 
+
+//                 theader.innerHTML = cols[i]; 
+//                 // Append columnName to the table row 
+//                 tr.appendChild(theader); 
+//             } 
+
+//             // Adding the data to the table 
+//             for (var i = 0; i < data.length; i++) { 
+//                 // Create a new row 
+//                 trow = table.insertRow(-1); 
+
+//                 for (var j = 0; j < cols.length; j++) { 
+//                     var cell = trow.insertCell(-1); 
+//                     // Inserting the cell at particular place 
+//                     cell.innerHTML = data[i][cols[j]]; 
+//                 } 
+//             } 
+
+//             // Add the newely created table containing json data 
+//             var el = document.getElementById("table"); 
+//             el.innerHTML = ""; 
+//             el.appendChild(table); 
+
+//         } else {
+//     const errorMessage = document.createElement('marquee')
+//     errorMessage.textContent = 'Error in connection'
+//     app.appendChild(errorMessage)
+//   }
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+	<div class="row">
+		<div class="twelve columns">
+		<img src="" align="left"/>
+		<p align="center"><h2>Get JSON REST API!</h2></p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li class="active"><a href="#">Home</a></li>
+  				<li><a href="#">Products</a></li>
+			</ul>
+			
+			<div id "root"></div>
+			<p id="demo"></p>
+    <input type ="submit" value = "Get JSON Data" class= "button"> 
+<button type="button" onclick="GetData()">Get JSON Data</button>
+    <table id="table" align = "center" border="1px"></table> 
+      			
+		</div>
+	</div>
+	
+
+	<div class="row">
+	
+	<div class="twelve columns">
+	
+		
+		
+	   </div>
+		
+	</div>
+</body>
